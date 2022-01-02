@@ -1,0 +1,143 @@
+task 8:
+1. write a person class contain all details
+
+CODE:
+var person = {
+    name:"john",
+    age:"23",
+    gender:"male",
+    mailid:"john@gmail.com",
+    car:"bmw",
+    profesion:"enginer",
+    working:"tcs",
+    address:
+    {
+        city:"chennai",
+        postalcode:"607001",
+    },
+    phonenumber:"1234567890",
+    country:"India",
+    state:"TamilNadu",
+};
+for(props in person){
+    console.log(person[props]);
+}
+ANSWER:
+john
+file.js:36 23
+file.js:36 male
+file.js:36 john@gmail.com
+file.js:36 bmw
+file.js:36 enginer
+file.js:36 tcs
+file.js:36 {city: 'chennai', postalcode: '607001'}
+file.js:36 1234567890
+file.js:36 India
+file.js:36 TamilNadu
+
+COMMENTS:
+  create a  object name of class is person
+  above method is literal method/traditional
+  
+  
+  details of person
+  
+  above details is access by for loop
+  
+  2) calculate uber price
+  
+  CODE:
+  class calculateprice {
+    constructor (type,locationfrom,locationto,waitingcharge,price,totalprice){
+        this.type=type,
+        this.locationfrom=locationfrom,
+        this.locationto=locationto,
+        this.waitingcharge=waitingcharge,
+        this.price=price,
+        this.totalprice=totalprice,
+
+        this.key = function(){
+            console.log(this.totalprice);
+        };
+
+    }
+}
+
+var uber = new calculateprice(
+    "ubermini",
+    "cuddalore",
+    "chennai",
+    "50 $",
+    "300 $",
+    "350 $",
+);
+uber.key();
+ANSWER:
+350 $
+
+COMMENTS:
+create a object
+convert the object to class with constructor
+write details for calculation
+then create a new object for class
+then access key from new object to class
+
+
+3) code:
+class circle{
+  
+    setter(radius,color){
+        this.radius=radius;
+        this.color=color;
+    }
+    getter(){
+        return`${this.radius} ${this.color}`;
+    }
+    
+}
+
+
+let circle1=new circle();
+circle1.setter("red","1.0");
+
+console.log(circle1.getter());
+
+answer: red,1.0
+
+comments:
+create a class  
+user getter and setter method to take value
+next create new class and print the answer in new class
+
+4) code:
+class Movie{
+    constructor(title,studio,rating='PG'){
+        this.title = title
+        this.studio = studio
+        this.rating = rating
+    }
+    getPG(arr){
+        let result = [];
+        arr.filter(movie=>{
+            if(movie.rating === 'PG'){
+                result.push(movie)
+            }
+        })
+        return result
+    }
+}
+const movie = new Movie('casine royle','eon production','PG13')
+const movie2 = new Movie('doctor','test','PG17')
+const movie3 = new Movie('kathi','lyca production','T')
+let movieArr = [movie,movie2,movie3]
+console.log(movie.getPG(movieArr))
+
+answer:'casine royle' 'eon production'  'PG13'
+comments:
+create a class  ,rating will be default pg
+check the default parameters to understand this
+create instance method and conditions
+create move1,movie2,movie3 
+print the result
+
+    
